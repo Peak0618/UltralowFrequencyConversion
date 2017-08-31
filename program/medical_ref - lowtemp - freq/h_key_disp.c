@@ -744,11 +744,11 @@ void led_disp2_deal(void)     //数码管2显示处理程序，在100ms定时程序中调用
         {
             guc_disp_rate = not_dot;
             //debug
-            //led2_disp_val(gss_VAC);              //选择电压显示
+            led2_disp_val(gss_VAC);              //选择电压显示
             //led2_disp_val(guc_bat_Vout);
             //led2_disp_val(gss_adg_Temp[0]);
             //led2_disp_val(guc_RTC_r_minute);
-            led2_disp_val(gss_comp2_freq / 10);    //debug高温压机频率  
+            //led2_disp_val(gss_comp2_freq / 10);    //debug高温压机频率  
         }
     }      
 }
@@ -798,9 +798,9 @@ void led_disp3_deal(void)        //数码管3显示处理程序，在100ms定时程序中调用
             //led3_disp_val(gss_adg_Temp[1]);
             //led3_disp_val(gss_bat_pwm_value);
             //led3_disp_val(gss_adg_Temp2);
-            //led3_disp_val(gss_THW);                   //环温
+            led3_disp_val(gss_THW);                   //环温
             //led3_disp_val(guc_RTC_r_second);
-            led3_disp_val(gss_comp21_freq / 10);    //debug低压机转速
+            //led3_disp_val(gss_comp21_freq / 10);    //debug低压机转速
         }
     }
 }
